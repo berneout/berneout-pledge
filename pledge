@@ -2,7 +2,7 @@ The Berneout Pledge
 
 $REVISION
 
-Contributors to projects published under free-of-charge public licenses, or "free public projects", follow unwritten rules about licensing and contribution.  They expect others to do so, too.  I make this pledge to make those unwritten rules, and the fact that I follow them, clear.
+Contributors to projects published under free-of-charge public licenses, or "free public projects", follow unwritten rules about licensing and contribution.  They expect others to do so, too.  I make this pledge to make those unwritten rules, and the fact that I follow them, explicit.
 
 Unless I specifically say otherwise in a contribution, whenever I make a contribution to a free public project, I license my contribution under the same license terms on which that project is licensed to the public at the time.
 
@@ -12,4 +12,4 @@ I pledge not to offer contributions to free public projects that I know may be s
 
 This pledge applies to all my contributions for one year, starting at $PLEDGE_TIMESTAMP.
 
-I may revoke this pledge earlier by posting a standard form revocation to $DOMAIN.
+I may revoke this pledge earlier by cryptographically signing a copy of The Berneout Pledge Revocation, $REVISION, with the same private key.
