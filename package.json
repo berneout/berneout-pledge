@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "devDependencies": {
+    "json": "^9.0.3",
+    "mustache": "^2.2.1"
+  }
+}
