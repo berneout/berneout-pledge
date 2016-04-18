@@ -14,4 +14,3 @@ tmp.json: variables.json
 
 $(MUSTACHE) $(JSON):
 	npm install
-
