@@ -12,6 +12,6 @@ all: pledge tmp.json $(MUSTACHE)
 tmp.json: variables.json
 	cat variables.json | $(JSON) -e 'this.PLEDGE_TIMESTAMP="$(TIMESTAMP)"' > $@
 
-$(MUSTACHE):
+$(MUSTACHE) $(JSON):
 	npm install
 
