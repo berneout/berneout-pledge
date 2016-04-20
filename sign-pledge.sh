@@ -43,7 +43,8 @@ git rm -f README.md
 git commit -m "Customize for @$user"
 
 cat <<EOS
-You have signed the pledge!
+
+You have signed The Berneout Pledge $edition!
 
 Two more steps to go:
 
