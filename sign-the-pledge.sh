@@ -22,6 +22,7 @@ sed --in-place -- "s!{{{PLEDGE}}}!The Berneout Pledge $edition!g" pledge
 
 git add pledge
 git rm -f sign-the-pledge.sh
+git rm -f README.md
 git commit -m "Customize for @$user"
 
 less pledge
