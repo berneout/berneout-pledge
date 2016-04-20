@@ -30,4 +30,5 @@ pledge publicly accessible at:
 https://github.com/{{{GITHUB_USER_NAME}}}/berneout-pledge/
 
 Signed: {{{SIGNATURE}}}
+        @{{{GITHUB_USER_NAME}}}
         {{{TIMESTAMP}}}
