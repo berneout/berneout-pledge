@@ -16,6 +16,7 @@ if [ -n "$edition" ]; then
 fi
 
 git add pledge
+git rm -f sign-the-pledge.sh
 git commit -m "Customize for @$user"
 
 less pledge
