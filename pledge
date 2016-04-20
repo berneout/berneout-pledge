@@ -26,9 +26,10 @@ with permission, I pledge to make public, as part of my contribution,
 who may own rights, the fact they gave permission, and how they
 gave permission.
 
-This pledge applies to all my contributions for one year, starting
-at {{{PLEDGE_TIMESTAMP}}}.
+This pledge applies to all my contributions, so long as I make this
+pledge publicly accessible at:
 
-I may revoke this pledge earlier by cryptographically signing a copy
-of The Berneout Pledge Revocation, {{{REVISION}}}, with the same
-private key, and posting it to {{{DOMAIN}}}.
+https://github.com/{{{GITHUB_USER_NAME}}}/berneout-pledge/
+
+Signed: {{{SIGNATURE}}}
+        {{{TIMESTAMP}}}
