@@ -17,7 +17,8 @@ fi
 
 git add pledge
 git commit -m "Customize for @$user"
-git log -n 1 -p
+
+less pledge
 
 cat <<EOS
 You have signed the pledge!
