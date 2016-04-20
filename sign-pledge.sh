@@ -51,4 +51,5 @@ Two more steps to go:
 1. Create the repository github.com/$user/berneout-pledge.
 
 2. Push this Git repository there.
+
 EOS
