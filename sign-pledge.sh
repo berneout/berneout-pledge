@@ -13,19 +13,34 @@ fi
 timestamp=$(date --utc --iso-8601=minutes)
 
 read -p "Enter you GitHub user name, without @: " user
-read -p "Sign your name by typing it between /slashes/: " signature
 
+sed --in-place -- "s!{{{PLEDGE}}}!The Berneout Pledge $edition!g" pledge
 sed --in-place -- "s!{{{GITHUB_USER_NAME}}}!$user!g" pledge
+
+cat <<EOS
+
+########################################################################
+
+EOS
+
+head -n -3 pledge
+
+cat <<EOS
+########################################################################
+# To sign the pledge, type your name between slashes like /Casey Yao/. #
+# If you don't want to sign, press Control + C to exit.                #
+########################################################################
+
+EOS
+read -p "Signed: " signature
+
 sed --in-place -- "s!{{{SIGNATURE}}}!$signature!g" pledge
 sed --in-place -- "s!{{{TIMESTAMP}}}!$timestamp!g" pledge
-sed --in-place -- "s!{{{PLEDGE}}}!The Berneout Pledge $edition!g" pledge
 
 git add pledge
 git rm -f sign-pledge.sh
 git rm -f README.md
 git commit -m "Customize for @$user"
-
-less pledge
 
 cat <<EOS
 You have signed the pledge!
