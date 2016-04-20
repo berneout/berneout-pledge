@@ -17,3 +17,14 @@ fi
 
 git add pledge
 git commit -m "Customize for @$user"
+git log -n 1 -p
+
+cat <<EOS
+You have signed the pledge!
+
+Two more steps to go:
+
+1. Create the repository github.com/$user/berneout-pledge.
+
+2. Push this Git repository there.
+EOS
