@@ -10,8 +10,6 @@ EOS
 exit 1
 fi
 
-timestamp=$(date --utc --iso-8601=minutes)
-
 read -p "Enter you GitHub user name, without @: " user
 
 sed --in-place -- "s!{{{PLEDGE}}}!The Berneout Pledge $edition!g" pledge
@@ -33,6 +31,7 @@ cat <<EOS
 
 EOS
 read -p "Signed: " signature
+timestamp=$(date --utc --iso-8601=minutes)
 
 sed --in-place -- "s!{{{SIGNATURE}}}!$signature!g" pledge
 sed --in-place -- "s!{{{TIMESTAMP}}}!$timestamp!g" pledge
