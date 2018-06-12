@@ -38,6 +38,7 @@ sed --in-place -- "s!{{{TIMESTAMP}}}!$timestamp!g" pledge
 
 git add pledge
 git rm -f sign-pledge.sh
+git rm -f sign-pledge.bat
 git rm -f README.md
 git commit -m "Customize for @$user"
 
