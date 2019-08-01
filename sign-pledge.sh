@@ -10,7 +10,7 @@ EOS
 exit 1
 fi
 
-read -p "Enter you GitHub user name, without @: " user
+read -p "Enter your GitHub user name, without @: " user
 
 sed --in-place -- "s!{{{PLEDGE}}}!The Berneout Pledge $edition!g" pledge
 sed --in-place -- "s!{{{GITHUB_USER_NAME}}}!$user!g" pledge
