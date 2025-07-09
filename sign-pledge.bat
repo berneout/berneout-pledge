@@ -11,18 +11,6 @@ for /f "tokens=*" %%i in ('git 2^>^&1 1^>NUL') do (
 	exit /B 1
 )
 
-set EDITION=
-for /f "tokens=*" %%i in ('git tag -l --points-at HEAD 2^> nul') do set EDITION=%%i
-
-if "%EDITION%"=="" (
-	(
-	echo This is not an official edition of The Berneout Pledge!  Please visit
-	echo https://github.com/berneout/berneout-pledge for the latest edition!
-	) 1>&2
-	pause
-	exit /B 1
-)
-
 set /p USER=Enter you GitHub user name, without @: 
 
 echo.
@@ -55,7 +43,6 @@ for /f "tokens=1* delims=]" %%A in ('type "pledge" ^| find /n /v ""') do (
 		for /f "tokens=*" %%i in ('cscript //E:jscript //nologo "%~f0" %*') do set TIMESTAMP=%%i
 	)
 	if "!LINE!" neq "" (
-		set "LINE=!LINE:{{{PLEDGE}}}=The Berneout Pledge %EDITION%!"
 		set "LINE=!LINE:{{{GITHUB_USER_NAME}}}=%USER%!"
 		for /f "delims=" %%Z in ("!TIMESTAMP!") do set "LINE=!LINE:{{{TIMESTAMP}}}=%%Z!"
 		for /f "delims=" %%Z in ("!SIGNATURE!") do set "LINE=!LINE:{{{SIGNATURE}}}=%%Z!"
@@ -76,7 +63,7 @@ call git rm -f README.md
 call git commit -m "Customize for @%USER%"
 
 echo.
-echo You have signed The Berneout Pledge %EDITION%!
+echo You have signed The Berneout Pledge!
 echo.
 echo Two more steps to go:
 echo.
